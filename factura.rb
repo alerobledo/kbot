@@ -7,6 +7,8 @@ class Factura
             "0.0685".to_f    
         when  "NV" 
             "0.08".to_f            
+        when  "TX" 
+            "0.0625".to_f
         end          
     end
 
