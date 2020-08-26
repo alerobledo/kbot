@@ -9,6 +9,8 @@ class Factura
             "0.08".to_f            
         when  "TX" 
             "0.0625".to_f
+        when  "AL" 
+            "0.04".to_f
         end          
     end
 
