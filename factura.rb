@@ -1,6 +1,9 @@
 class Factura
     def calcularPorcentajeDeImpuesto(estado)
-        "0.0825".to_f        
+        case estado
+        when  "CA" 
+            "0.0825".to_f
+        end          
     end
 
     def calcularPorcentajeDescuento(cant)
