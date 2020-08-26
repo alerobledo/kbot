@@ -1,6 +1,6 @@
 class Factura
-    def calcularPorcentajeDeImpuesto()
-        "0.0825".to_f
+    def calcularPorcentajeDeImpuesto(estado)
+        "0.0825".to_f        
     end
 
     def calcularPorcentajeDescuento(cant)
@@ -29,7 +29,8 @@ estado= ARGV[2]
 factura=Factura.new()
 
 subtotal = cant*precioUnitario
-impuesto = subtotal*factura.calcularPorcentajeDeImpuesto()
+porcentajeDeImpuesto = factura.calcularPorcentajeDeImpuesto(estado)
+impuesto = subtotal*porcentajeDeImpuesto
 totalBruto= subtotal+impuesto
 
 PorcentajeDto = factura.calcularPorcentajeDescuento(cant)
@@ -39,7 +40,7 @@ totalFinal = totalBruto*(1-PorcentajeDto)
 puts "Valar Morghulis"
 puts "cant: #{cant}   -  precioUnitario: #{precioUnitario}  -  estado: #{estado}"
 puts "subtotal: #{subtotal}"
-puts "Porcentaje De Impuesto: #{factura.calcularPorcentajeDeImpuesto()}"
+puts "Porcentaje De Impuesto: #{porcentajeDeImpuesto}"
 puts "impuesto: #{impuesto}"
 puts "totalBruto: #{totalBruto}"
 puts "Porcentaje Descuento: #{PorcentajeDto}"
