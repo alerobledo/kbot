@@ -21,8 +21,10 @@ class Factura
     end
 
 end
+
 cant = ARGV[0].to_i
 precioUnitario = ARGV[1].to_f
+estado= ARGV[2]
 
 factura=Factura.new()
 
@@ -35,7 +37,7 @@ PorcentajeDto = factura.calcularPorcentajeDescuento(cant)
 totalFinal = totalBruto*(1-PorcentajeDto)
 
 puts "Valar Morghulis"
-puts "cant: #{cant}   -  precioUnitario: #{precioUnitario}"
+puts "cant: #{cant}   -  precioUnitario: #{precioUnitario}  -  estado: #{estado}"
 puts "subtotal: #{subtotal}"
 puts "Porcentaje De Impuesto: #{factura.calcularPorcentajeDeImpuesto()}"
 puts "impuesto: #{impuesto}"
