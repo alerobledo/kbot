@@ -4,10 +4,13 @@ class Factura
     end
 
     def calcularPorcentajeDescuento(cant)
-        if cant<1000
+        case cant
+        when 0 .. 999
             "0".to_f
-        elsif cant>=1000
-            "0.03".to_f
+        when 1000 .. 4999
+            "0.03".to_f        
+        when 5000 .. 6999
+            "0.05".to_f    
         end    
     end
 
