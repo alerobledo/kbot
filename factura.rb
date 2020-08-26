@@ -14,7 +14,9 @@ class Factura
         when 7000 .. 9999
             "0.07".to_f
         when 10000 .. 14999
-            "0.1".to_f                
+            "0.1".to_f
+        else
+            "0.15".to_f
         end    
     end
 
