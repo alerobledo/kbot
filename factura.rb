@@ -3,6 +3,8 @@ class Factura
         case estado
         when  "CA" 
             "0.0825".to_f
+        when  "UT" 
+            "0.0685".to_f    
         end          
     end
 
