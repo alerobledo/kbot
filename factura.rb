@@ -5,6 +5,8 @@ class Factura
             "0.0825".to_f
         when  "UT" 
             "0.0685".to_f    
+        when  "NV" 
+            "0.08".to_f            
         end          
     end
 
